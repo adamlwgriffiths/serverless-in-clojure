@@ -2,9 +2,6 @@
   :dependencies '[[org.clojure/clojure "1.8.0"]
                   [org.clojure/tools.namespace "0.3.0-alpha3" :scope "test"]
 
-                  ; State management
-                  [mount "0.1.10"]
-
                   ; Amazon Lambda support
                   [uswitch/lambada "0.1.2"]
 
@@ -16,10 +13,7 @@
 
                   ; Environment variables
                   [environ "1.0.3"]
-                  [boot-environ "1.0.3" :scope "test"]
-
-                  ; Time management
-                  [clj-time "0.12.0"]]
+                  [boot-environ "1.0.3" :scope "test"]]
 
   :source-paths #{"src"})
 
