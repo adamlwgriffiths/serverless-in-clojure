@@ -9,7 +9,9 @@ This repository is a part of a series of tutorials for building Clojure services
 
 Each folder matches with a tutorial. I'll continually add new material as I write more.
 
-I've avoided pulling too much of the development environment in the tutorials. Here is where I'll be explaining the tooling I've used.
+## Tutorial links
+
+All of the links to the tutorials can be found in the [Table Of Contents](TOC.md).
 
 ## Docker
 
