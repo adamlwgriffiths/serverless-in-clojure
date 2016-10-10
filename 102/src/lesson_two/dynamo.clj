@@ -20,8 +20,8 @@
   "Place a single prime into our list"
   [index prime]
   (dynamo/put-item client-config table-name
-                         {:index index
-                          :prime prime}))
+                   {:index index
+                    :prime prime}))
 
 (defn list-primes
   "Get the entire list of primes.
