@@ -30,14 +30,14 @@
   operations. This is only for demonstration purposes."
   []
   (->> (dynamo/scan client-config table-name)
-       (map :prime)
+       (map (comp int :prime))
        (apply sorted-set)
        vec))
 
 (defn get-prime
   "Get a specific prime from our list"
   [index]
-  (:prime (dynamo/get-item client-config table-name {:index index})))
+  (int (:prime (dynamo/get-item client-config table-name {:index index}))))
 
 ; Here we can programmatically create the table for DynamoDB Local
 #_(dynamo/create-table client-config table-name
