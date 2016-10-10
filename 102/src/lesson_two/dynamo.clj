@@ -4,15 +4,16 @@
     [taoensso.faraday :as dynamo]))
 
 ; When we are in local development, we feed some fake keys and the endpoint
-; for the local DynamoDB server. When we run in Lambda, this will be `nil` and
-; Faraday will grab the real configuration details.
+; for the local DynamoDB server. When we run in Lambda, :development will be
+; `nil` and Faraday will grab the real configuration details.
 (def client-config
-  (when (:development env)
+  (if (:development env)
     {:access-key "OMG_DEVELOPMENT"
      :secret-key "I_SHOULD_KEEP_THIS_SECRET!"
 
      ; Point the configuration at the DynamoDB Local
-     :endpoint "http://localhost:8000"}))
+     :endpoint "http://localhost:8000"}
+    {:endpoint "http://dynamodb.us-west-2.amazonaws.com"}))
 
 (def table-name :primes)
 
