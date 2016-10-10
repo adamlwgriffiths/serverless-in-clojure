@@ -36,7 +36,7 @@
   aot {:all true}
   pom {:project 'lesson-two
        :version (version)}
-  jar {:file (str "lesson-one-" (version) ".jar")
+  jar {:file (str "lesson-two-" (version) ".jar")
        :main 'lesson-two.core})
 
 ;; Tasks
