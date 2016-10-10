@@ -8,6 +8,9 @@
                   ; Logging
                   [com.taoensso/timbre "4.7.3"]
 
+                  ; DynamoDB integration
+                  [com.taoensso/faraday "1.9.0"]
+
                   ; JSON
                   [cheshire "5.6.3"]
 
